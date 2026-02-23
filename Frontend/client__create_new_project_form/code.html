@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Create New Project - FlowPay</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0",
+                        "lg": "0",
+                        "xl": "0",
+                        "2xl": "0",
+                        "full": "0"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none !important;
+            border-color: #000000 !important;
+            ring: 0 !important;
+        }
+        .dark input:focus, .dark select:focus, .dark textarea:focus {
+            border-color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white min-h-screen">
+    <header
+        class="sticky top-0 z-50 w-full border-b border-black dark:border-white/20 bg-white/80 dark:bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="../flowpay_landing_page_hero/code.html"
+                    class="flex items-center gap-3 no-underline text-black dark:text-white">
+                    <div class="bg-black dark:bg-white p-1.5">
+                        <svg class="w-6 h-6 text-white dark:text-black" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight uppercase">FlowPay</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                        href="../client_dashboard_overview/code.html">Dashboard</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-black dark:text-white"
+                        href="#">Projects</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                        href="../streaming_project_view_logic/code.html">Streams</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                        href="../freelancer__incoming_project_requests/code.html">Freelancer</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:flex flex-col items-end mr-2">
+                        <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Network</span>
+                        <span class="text-xs font-mono font-bold">0x71C...4e2</span>
+                    </div>
+                    <button
+                        class="border border-black dark:border-white p-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+                        <span class="material-symbols-outlined text-xl leading-none">account_balance_wallet</span>
+                    </button>
+                    <div class="w-10 h-10 border border-black dark:border-white overflow-hidden grayscale">
+                        <img alt="User Avatar" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoyMyPq28ihNP9BvUs7WOB0aT5nVMbLeS-raa6palqlWm4EtVhgndu6xT8I0QP9RODwCU52q3qmh7sbMTvzsvUlWrCAtJ54LhY0HFV8YULYc-DqHQWimUfv21iqE71B_sTrElIDWI69ZJ12jlEuzs3ubuDGn9P7VObaJNcIiRUuXh-wA_usBqjHyhZtubRiGvxj-NG-xxirqG2E-N7mbudEdWHYj2lG1_m4PzBJJ0lC4ckCDYj8jasQsKfzWVPQIci1B0tTEf0tFcr" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <nav class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-6">
+                <a class="hover:text-black dark:hover:text-white transition-colors"
+                    href="../client_dashboard_overview/code.html">Projects</a>
+                <span class="material-symbols-outlined text-base">chevron_right</span>
+                <span class="text-black dark:text-white">Create Project</span>
+            </nav>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h1 class="text-5xl font-black tracking-tighter mb-4 uppercase">Create Project</h1>
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="flex items-center gap-2 px-3 py-1 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold uppercase tracking-widest">
+                            <span class="relative flex h-2 w-2">
+                                <span class="relative inline-flex h-2 w-2 bg-current"></span>
+                            </span>
+                            Drafting Contract
+                        </span>
+                        <p class="text-neutral-500 dark:text-neutral-400 text-sm font-medium">Define milestones and
+                            secure your project budget in INR.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <a href="../client_dashboard_overview/code.html"
+                        class="px-8 py-3 border border-black dark:border-white font-bold text-xs uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-all no-underline text-black dark:text-white">Save
+                        Draft</a>
+                    <a href="../streaming_project_view_logic/code.html"
+                        class="px-8 py-3 bg-black text-white dark:bg-white dark:text-black font-bold text-xs uppercase tracking-widest hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all no-underline">Deploy
+                        Contract</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 space-y-12">
+                <section class="border-t-2 border-black dark:border-white pt-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="text-3xl font-black italic">01</span>
+                        <h2 class="text-xl font-bold uppercase tracking-tight">Freelancer Identity</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block">
+                            <span
+                                class="block text-[10px] font-bold uppercase tracking-widest mb-2 text-neutral-500">Freelancer
+                                Unique ID (ENS or Wallet Address)</span>
+                            <div class="relative group">
+                                <span
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-neutral-400">person_search</span>
+                                <input
+                                    class="w-full pl-12 pr-32 py-4 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white transition-all text-sm"
+                                    placeholder="e.g. alex.eth or 0x..." type="text" value="alex_design.flow" />
+                                <div
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white px-3 py-1.5 border border-black dark:border-white">
+                                    <span class="material-symbols-outlined text-sm font-bold">verified</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Verified</span>
+                                </div>
+                            </div>
+                            <p class="mt-3 text-[10px] font-bold uppercase tracking-widest text-neutral-400">Found: Alex
+                                Rivera • Senior Product Designer • 98% Success Rate</p>
+                        </label>
+                    </div>
+                </section>
+                <section class="border-t-2 border-black dark:border-white pt-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="text-3xl font-black italic">02</span>
+                        <h2 class="text-xl font-bold uppercase tracking-tight">Project Scope</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="md:col-span-2">
+                            <label class="block">
+                                <span
+                                    class="block text-[10px] font-bold uppercase tracking-widest mb-2 text-neutral-500">Project
+                                    Name</span>
+                                <input
+                                    class="w-full px-4 py-4 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white transition-all text-sm"
+                                    placeholder="e.g. Mobile App Redesign 2024" type="text" />
+                            </label>
+                        </div>
+                        <div>
+                            <label class="block">
+                                <span
+                                    class="block text-[10px] font-bold uppercase tracking-widest mb-2 text-neutral-500">Currency</span>
+                                <select
+                                    class="w-full px-4 py-4 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white appearance-none transition-all text-sm font-bold">
+                                    <option>INR (Indian Rupee)</option>
+                                    <option>USDC (Stablecoin)</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="block">
+                                <span
+                                    class="block text-[10px] font-bold uppercase tracking-widest mb-2 text-neutral-500">Total
+                                    Budget (INR)</span>
+                                <div class="relative">
+                                    <span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold">₹</span>
+                                    <input
+                                        class="w-full pl-10 pr-4 py-4 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white transition-all font-mono font-bold text-sm"
+                                        placeholder="0.00" type="number" value="1050000" />
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <section class="border-t-2 border-black dark:border-white pt-8">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl font-black italic">03</span>
+                            <h2 class="text-xl font-bold uppercase tracking-tight">Phase Breakdown</h2>
+                        </div>
+                        <button
+                            class="flex items-center gap-2 text-black dark:text-white font-bold text-[10px] uppercase tracking-widest hover:underline">
+                            <span class="material-symbols-outlined text-lg">add_circle</span>
+                            Add Phase
+                        </button>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-12 gap-6 p-6 border border-neutral-200 dark:border-neutral-800 items-end">
+                            <div class="md:col-span-1 flex flex-col items-center justify-center">
+                                <span class="text-[10px] font-black text-neutral-400 uppercase italic">P1</span>
+                            </div>
+                            <div class="md:col-span-7">
+                                <label class="block">
+                                    <span
+                                        class="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2">Phase
+                                        Title</span>
+                                    <input
+                                        class="w-full px-3 py-3 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white text-sm font-medium"
+                                        type="text" value="Discovery &amp; User Research" />
+                                </label>
+                            </div>
+                            <div class="md:col-span-3">
+                                <label class="block">
+                                    <span
+                                        class="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2">Amount
+                                        (INR)</span>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 text-xs">₹</span>
+                                        <input
+                                            class="w-full pl-8 pr-3 py-3 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white text-sm font-mono font-bold"
+                                            type="number" value="250000" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="md:col-span-1 flex justify-center pb-2">
+                                <button
+                                    class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-12 gap-6 p-6 border border-neutral-200 dark:border-neutral-800 items-end">
+                            <div class="md:col-span-1 flex flex-col items-center justify-center">
+                                <span class="text-[10px] font-black text-neutral-400 uppercase italic">P2</span>
+                            </div>
+                            <div class="md:col-span-7">
+                                <label class="block">
+                                    <span
+                                        class="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2">Phase
+                                        Title</span>
+                                    <input
+                                        class="w-full px-3 py-3 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white text-sm font-medium"
+                                        type="text" value="UI/UX Prototyping" />
+                                </label>
+                            </div>
+                            <div class="md:col-span-3">
+                                <label class="block">
+                                    <span
+                                        class="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2">Amount
+                                        (INR)</span>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 text-xs">₹</span>
+                                        <input
+                                            class="w-full pl-8 pr-3 py-3 bg-transparent border-neutral-300 dark:border-neutral-700 focus:border-black dark:focus:border-white text-sm font-mono font-bold"
+                                            type="number" value="800000" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="md:col-span-1 flex justify-center pb-2">
+                                <button
+                                    class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full py-6 border-2 border-dashed border-neutral-200 dark:border-neutral-800 text-neutral-400 font-bold text-[10px] uppercase tracking-widest hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">add</span>
+                            Add Next Milestone
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <div class="lg:col-span-1">
+                <div class="sticky top-28 space-y-8">
+                    <div class="border-2 border-black dark:border-white p-8 bg-white dark:bg-black relative">
+                        <h3 class="text-xl font-black mb-8 uppercase tracking-tighter flex items-center gap-2">
+                            <span class="material-symbols-outlined">analytics</span>
+                            Summary
+                        </h3>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-500">Project
+                                    Value</span>
+                                <span class="text-sm font-mono font-bold">₹10,50,000.00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-neutral-500">Platform
+                                        Fee</span>
+                                    <span
+                                        class="material-symbols-outlined text-xs text-neutral-400 cursor-help">info</span>
+                                </div>
+                                <span class="text-sm font-mono font-bold text-neutral-400">+ ₹21,000.00</span>
+                            </div>
+                            <div class="pt-6 border-t border-black dark:border-white flex justify-between items-start">
+                                <span class="text-sm font-black uppercase italic">Initial Escrow</span>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black font-mono">₹10,71,000.00</span>
+                                    <p class="text-[10px] text-neutral-500 uppercase font-bold tracking-widest mt-2">
+                                        Total INR required</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="../streaming_project_view_logic/code.html"
+                                class="w-full py-5 bg-black text-white dark:bg-white dark:text-black font-black uppercase tracking-widest hover:invert transition-all flex items-center justify-center gap-3 text-xs no-underline">
+                                <span class="material-symbols-outlined text-lg">lock</span>
+                                Deploy &amp; Deposit
+                            </a>
+                            <p
+                                class="text-[9px] text-center font-bold text-neutral-400 uppercase tracking-widest leading-relaxed">
+                                Blockchain deployment initiates smart contract escrow protocol.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="border border-neutral-200 dark:border-neutral-800 p-6 flex gap-4 bg-neutral-50 dark:bg-neutral-900">
+                        <div class="text-black dark:text-white">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black uppercase tracking-widest">Escrow Protection</p>
+                            <p class="text-[10px] text-neutral-500 font-medium mt-1 leading-relaxed">Funds are released
+                                only upon milestone approval or arbitration.</p>
+                        </div>
+                    </div>
+                    <div class="h-40 relative border border-black dark:border-white grayscale">
+                        <img alt="Map visualization" class="w-full h-full object-cover opacity-30"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMzQPjjjz4tZsAa8OkkztQgXxFspMuseDXWog7XudHMr6P4m4ionTu_u0ufg5499AZGLnhgvk9xfR2FOM2Cl4PATeozw_aH81WR9opPFVwQ74jl05nGDRbzIGCYnFp4Gjr1DLYH5pfwgUfgVQi68Joi_x2jFI4_IDLIqe0MN2Sy8d4r_2YZwqkb__Tpm_3t6E6WcImu7SdTFnT6CzeWSVcK4mzyK-cKgE6cfzjPGWwDHyFnddmKHDfWtdqRVv_wWZ3Je9GL2mIaSiy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest">Global Remote
+                                Operation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-24 py-12 border-t border-black dark:border-white/20">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4 text-neutral-500">
+                <span class="material-symbols-outlined text-sm">code</span>
+                <span class="text-[10px] font-mono font-bold uppercase tracking-widest">Contract v2.4.0-STABLE /
+                    INR-RELAY</span>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-[10px] font-black text-neutral-400 hover:text-black dark:hover:text-white transition-colors uppercase tracking-widest"
+                    href="#">Support</a>
+                <a class="text-[10px] font-black text-neutral-400 hover:text-black dark:hover:text-white transition-colors uppercase tracking-widest"
+                    href="#">Legal</a>
+                <a class="text-[10px] font-black text-neutral-400 hover:text-black dark:hover:text-white transition-colors uppercase tracking-widest"
+                    href="#">Audit</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Stitch — Project Index</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFFFFF",
+                        "background": "#000000",
+                        "surface": "#111111",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .grainy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+        a.page-link {
+            transition: all 0.2s ease;
+        }
+        a.page-link:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(8px);
+        }
+        a.page-link:hover .arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+        .arrow {
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="font-display antialiased">
+    <div class="fixed inset-0 pointer-events-none grainy-bg z-50"></div>
+    <div class="relative min-h-screen flex flex-col">
+        <header class="max-w-4xl w-full mx-auto px-6 lg:px-10 py-10 flex items-center gap-3 border-b border-white/10">
+            <div class="w-8 h-8 flex items-center justify-center bg-white text-black">
+                <span class="material-symbols-outlined text-xl font-bold">all_inclusive</span>
+            </div>
+            <span class="text-xl font-black tracking-tighter uppercase">Stitch</span>
+            <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-2">Project Index</span>
+        </header>
+
+        <main class="max-w-4xl w-full mx-auto px-6 lg:px-10 py-16 flex-1">
+            <h1 class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4">All Pages</h1>
+            <p class="text-zinc-500 text-sm font-medium mb-12">Browse all screens and components in this project.</p>
+
+            <div class="flex flex-col divide-y divide-white/10 border-t border-b border-white/10">
+                <a href="flowpay_landing_page_hero/code.html" class="page-link flex items-center gap-6 py-6 px-4 no-underline text-white">
+                    <div class="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">rocket_launch</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-black uppercase tracking-tight">Landing Page Hero</div>
+                        <div class="text-xs text-zinc-500 font-medium mt-0.5">FlowPay landing page with hero section and features</div>
+                    </div>
+                    <span class="material-symbols-outlined arrow text-zinc-500">arrow_forward</span>
+                </a>
+
+                <a href="client_dashboard_overview/code.html" class="page-link flex items-center gap-6 py-6 px-4 no-underline text-white">
+                    <div class="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">dashboard</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-black uppercase tracking-tight">Client Dashboard Overview</div>
+                        <div class="text-xs text-zinc-500 font-medium mt-0.5">Dashboard view for clients to manage projects</div>
+                    </div>
+                    <span class="material-symbols-outlined arrow text-zinc-500">arrow_forward</span>
+                </a>
+
+                <a href="client__create_new_project_form/code.html" class="page-link flex items-center gap-6 py-6 px-4 no-underline text-white">
+                    <div class="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">add_circle</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-black uppercase tracking-tight">Create New Project Form</div>
+                        <div class="text-xs text-zinc-500 font-medium mt-0.5">Client-side form for creating new projects</div>
+                    </div>
+                    <span class="material-symbols-outlined arrow text-zinc-500">arrow_forward</span>
+                </a>
+
+                <a href="freelancer__incoming_project_requests/code.html" class="page-link flex items-center gap-6 py-6 px-4 no-underline text-white">
+                    <div class="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">inbox</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-black uppercase tracking-tight">Freelancer Incoming Requests</div>
+                        <div class="text-xs text-zinc-500 font-medium mt-0.5">View for freelancers to see incoming project requests</div>
+                    </div>
+                    <span class="material-symbols-outlined arrow text-zinc-500">arrow_forward</span>
+                </a>
+
+                <a href="streaming_project_view_logic/code.html" class="page-link flex items-center gap-6 py-6 px-4 no-underline text-white">
+                    <div class="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">stream</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-black uppercase tracking-tight">Streaming Project View</div>
+                        <div class="text-xs text-zinc-500 font-medium mt-0.5">Real-time streaming project view with logic</div>
+                    </div>
+                    <span class="material-symbols-outlined arrow text-zinc-500">arrow_forward</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="max-w-4xl w-full mx-auto px-6 lg:px-10 py-10 border-t border-white/10">
+            <span class="text-xs font-black uppercase tracking-[0.3em] opacity-40">Stitch © 2024</span>
+        </footer>
+    </div>
+</body>
+</html>

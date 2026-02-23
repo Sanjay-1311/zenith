@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FlowPay | High-End Milestone Payments</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#FFFFFF",
+            "background": "#000000",
+            "surface": "#111111",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "none": "0",
+            "DEFAULT": "0",
+            "lg": "0",
+            "xl": "0",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+            body {
+                @apply bg-black text-white antialiased selection:bg-white selection:text-black;
+            }
+        }
+        .brutalist-border {
+            border: 1px solid #FFFFFF;
+        }
+        .glass-mono {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .grainy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+    </style>
+</head>
+
+<body class="font-display">
+  <div class="fixed inset-0 pointer-events-none grainy-bg z-50"></div>
+  <div class="relative min-h-screen">
+    <header class="max-w-7xl mx-auto px-6 lg:px-10 py-10 flex items-center justify-between border-b border-white/10">
+      <a href="../index.html" class="flex items-center gap-3 no-underline text-white">
+        <div class="w-8 h-8 flex items-center justify-center bg-white text-black">
+          <span class="material-symbols-outlined text-xl font-bold">all_inclusive</span>
+        </div>
+        <span class="text-xl font-black tracking-tighter uppercase">FlowPay</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-12">
+        <a class="text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity"
+          href="#features">Features</a>
+        <a class="text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity"
+          href="../client_dashboard_overview/code.html">Dashboard</a>
+        <a class="text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity"
+          href="../freelancer__incoming_project_requests/code.html">Freelancer</a>
+      </nav>
+      <div class="flex items-center">
+        <a href="../client_dashboard_overview/code.html"
+          class="px-6 py-2 bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-zinc-200 transition-colors no-underline">
+          Launch App
+        </a>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-32">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 flex flex-col gap-10">
+          <div class="inline-flex items-center gap-3 px-4 py-1.5 border border-white/20 w-fit">
+            <span class="h-1.5 w-1.5 bg-white rounded-full"></span>
+            <span class="text-[10px] font-black uppercase tracking-[0.2em]">Protocol V2.0 Enabled</span>
+          </div>
+          <h1 class="text-5xl lg:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
+            Programmable <span class="text-zinc-500">Milestone</span> Payments
+          </h1>
+          <p class="text-lg text-zinc-400 max-w-lg leading-relaxed font-medium">
+            Automated escrow and proof-of-work streaming for high-stakes remote engineering. Secure capital efficiency
+            through verifiable delivery.
+          </p>
+          <div class="flex flex-wrap gap-0">
+            <a href="../client_dashboard_overview/code.html"
+              class="px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-zinc-200 transition-all no-underline">
+              Start as Client
+            </a>
+            <a href="../freelancer__incoming_project_requests/code.html"
+              class="px-10 py-5 bg-black text-white border border-white font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all no-underline">
+              Join as Freelancer
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-6 relative">
+          <div class="glass-mono p-10 relative">
+            <div class="flex items-center justify-between mb-16">
+              <div class="flex gap-2">
+                <div class="w-2 h-2 rounded-full border border-white/40"></div>
+                <div class="w-2 h-2 rounded-full border border-white/40"></div>
+                <div class="w-2 h-2 rounded-full border border-white/40"></div>
+              </div>
+              <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-[0.3em]">Network Stream: Active</div>
+            </div>
+            <div class="flex flex-col gap-14 relative">
+              <div class="absolute left-6 top-6 bottom-6 w-[1px] bg-white/10"></div>
+              <div class="flex items-center gap-8 relative z-10">
+                <div class="w-12 h-12 bg-black border border-white/20 flex items-center justify-center text-white">
+                  <span class="material-symbols-outlined text-xl">contract</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Phase 01</span>
+                  <span class="text-sm font-bold uppercase tracking-tight">Contract Hash verified</span>
+                </div>
+                <div class="ml-auto px-2 py-0.5 border border-white/20 text-[9px] font-black uppercase">LOCKED</div>
+              </div>
+              <div class="flex items-center gap-8 relative z-10">
+                <div class="w-12 h-12 bg-white flex items-center justify-center text-black">
+                  <span class="material-symbols-outlined text-xl font-bold">encrypted</span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="text-[9px] font-bold text-black uppercase tracking-widest bg-white w-fit px-1 mb-0.5">Phase
+                    02</span>
+                  <span class="text-sm font-bold uppercase tracking-tight text-white">Escrow Vault</span>
+                </div>
+                <div class="ml-auto text-lg font-black tracking-tighter">₹10,50,000</div>
+              </div>
+              <div class="flex items-center gap-8 relative z-10">
+                <div class="w-12 h-12 bg-black border border-white/20 flex items-center justify-center text-zinc-600">
+                  <span class="material-symbols-outlined text-xl">payments</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Phase 03</span>
+                  <span class="text-sm font-bold uppercase tracking-tight text-zinc-500">Release M1</span>
+                </div>
+                <div class="ml-auto">
+                  <div class="w-20 h-1 bg-zinc-900 overflow-hidden">
+                    <div class="w-3/4 h-full bg-zinc-400"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-6 -right-6 bg-white p-5 shadow-2xl flex items-center gap-4 border-4 border-black">
+            <div class="w-10 h-10 bg-black flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-lg">verified</span>
+            </div>
+            <div>
+              <div class="text-[9px] text-zinc-500 font-black uppercase tracking-widest">Success</div>
+              <div class="text-xs font-black text-black uppercase">Transaction Signed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-0 mt-40 border-t border-white/10">
+        <div class="p-12 border-r border-b border-white/10 hover:bg-white/5 transition-colors group">
+          <div
+            class="w-10 h-10 border border-white/20 flex items-center justify-center mb-10 group-hover:bg-white group-hover:text-black transition-all">
+            <span class="material-symbols-outlined text-lg">gavel</span>
+          </div>
+          <h3 class="text-lg font-black uppercase tracking-tighter mb-4">Milestone Escrow</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed font-medium">
+            Funds reside in smart-contract custody, triggered only by multi-sig validation or verifiable proof-of-work
+            delivery.
+          </p>
+        </div>
+        <div class="p-12 border-r border-b border-white/10 hover:bg-white/5 transition-colors group">
+          <div
+            class="w-10 h-10 border border-white/20 flex items-center justify-center mb-10 group-hover:bg-white group-hover:text-black transition-all">
+            <span class="material-symbols-outlined text-lg">cyclone</span>
+          </div>
+          <h3 class="text-lg font-black uppercase tracking-tighter mb-4">Real-time Streams</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed font-medium">
+            Transform lump sums into linear payout streams. Capital moves per-second, reflecting actual work output in
+            real-time.
+          </p>
+        </div>
+        <div class="p-12 border-b border-white/10 hover:bg-white/5 transition-colors group">
+          <div
+            class="w-10 h-10 border border-white/20 flex items-center justify-center mb-10 group-hover:bg-white group-hover:text-black transition-all">
+            <span class="material-symbols-outlined text-lg">account_tree</span>
+          </div>
+          <h3 class="text-lg font-black uppercase tracking-tighter mb-4">Fallback Logic</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed font-medium">
+            Automated arbitration windows and programmable refund triggers ensure zero-loss scenarios for failed
+            deliveries.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="max-w-7xl mx-auto px-6 lg:px-10 py-16 flex flex-col md:flex-row items-center justify-between gap-10 border-t border-white/10">
+      <div class="flex items-center gap-4">
+        <span class="text-xs font-black uppercase tracking-[0.3em] opacity-40">FlowPay Protocol © 2024</span>
+      </div>
+      <div class="flex gap-12">
+        <a class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors"
+          href="#">Twitter</a>
+        <a class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors"
+          href="#">GitHub</a>
+        <a class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors"
+          href="#">Discord</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-white rounded-full"></div>
+        <span class="text-[10px] font-black uppercase tracking-widest text-zinc-500">All Systems Operational</span>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

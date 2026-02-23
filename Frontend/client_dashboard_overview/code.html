@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FlowPay | Client Dashboard Overview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFFFFF",
+                        "background-dark": "#000000",
+                        "card-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-black text-white antialiased; }
+            .border-thin { @apply border border-white/10; }
+            .border-heavy { @apply border border-white; }
+        }
+        .monochrome-shadow {
+            box-shadow: 0 4px 20px -2px rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-black border-r border-white/10 flex flex-col">
+            <div class="p-6 flex flex-col gap-10 h-full">
+                <a href="../flowpay_landing_page_hero/code.html"
+                    class="flex items-center gap-3 no-underline text-white">
+                    <div class="bg-white rounded-none p-2 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-black">payments</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-black tracking-tighter uppercase">FlowPay</h1>
+                        <p class="text-[10px] text-white/50 font-mono tracking-widest">UID: FP-9921-X</p>
+                    </div>
+                </a>
+                <nav class="flex flex-col gap-2 grow">
+                    <a href="../client__create_new_project_form/code.html"
+                        class="flex items-center gap-3 px-4 py-3 border border-white bg-white text-black hover:bg-black hover:text-white transition-all duration-300 no-underline">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Create Project</span>
+                    </a>
+                    <div class="mt-8 flex flex-col gap-1">
+                        <a class="flex items-center gap-3 px-4 py-3 border border-white/20 bg-white/5 text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">grid_view</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">Active Streams</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 text-white/50 hover:text-white hover:bg-white/5 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">history</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">History</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 text-white/50 hover:text-white hover:bg-white/5 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">account_circle</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">Profile</span>
+                        </a>
+                    </div>
+                </nav>
+                <div class="border-t border-white/10 pt-6">
+                    <div class="flex items-center gap-3 p-3 bg-white/5 border border-white/10">
+                        <div class="size-8 bg-white/20"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALOtXTr-qngRR-R9_9Zxs05tHwQI8i3Tbbv3ebTkw9uQ95A6bwFd9uQXNsnWNas7aF68bt2moxIwU4M3pcMjbfr7RBd9XRPZrka8gfQFxOLkhJOwLygTzw_xvrUuXhtihc5FEOiBv1EXB7GVmmazRXQB3hI7tdzGByHwq1lfSIAY8HzSzlAwLZGGLWkNBwCN8v8F3jZrt141fuGlj-XFm8W7Tt0SQ8y6oMFDESlba8cWLWhEWUKVSsqs7U9U87p50tLeLChNzYPHd7'); background-size: cover;">
+                        </div>
+                        <div class="overflow-hidden">
+                            <p class="text-xs font-bold truncate">ALEX RIVERA</p>
+                            <p class="text-[10px] text-white/40 uppercase tracking-tighter">Pro Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            <header
+                class="h-20 border-b border-white/10 px-8 flex items-center justify-between bg-black sticky top-0 z-10">
+                <div class="flex items-center gap-6">
+                    <h2 class="text-lg font-black uppercase tracking-widest">Overview</h2>
+                    <div
+                        class="flex items-center gap-2 px-3 py-1 border border-white text-white text-[10px] font-bold uppercase tracking-widest">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                        </span>
+                        Network Active
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex flex-col items-end">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-white/40 font-bold">Wallet Node</span>
+                        <span class="text-xs font-mono text-white font-bold tracking-tight">0x71C...3e21</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="border border-white/10 hover:border-white p-2 transition-colors">
+                            <span class="material-symbols-outlined text-lg">notifications</span>
+                        </button>
+                        <button class="border border-white/10 hover:border-white p-2 transition-colors">
+                            <span class="material-symbols-outlined text-lg">settings</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="p-10 max-w-7xl mx-auto w-full">
+                <div class="mb-12 flex flex-wrap justify-between items-end gap-6">
+                    <div>
+                        <h3 class="text-4xl font-black tracking-tighter uppercase italic">Active Streams</h3>
+                        <p class="text-white/40 mt-2 font-medium">Real-time milestone-based liquidity management.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="bg-black border border-white/20 px-8 py-5 monochrome-shadow">
+                            <p class="text-[10px] text-white/40 font-bold uppercase tracking-[0.2em] mb-2">Total Locked
+                            </p>
+                            <p class="text-3xl font-mono font-bold">₹35,42,500<span
+                                    class="text-sm font-normal text-white/30 ml-2">INR</span></p>
+                        </div>
+                        <div class="bg-black border border-white/20 px-8 py-5 monochrome-shadow">
+                            <p class="text-[10px] text-white/40 font-bold uppercase tracking-[0.2em] mb-2">Active Nodes
+                            </p>
+                            <p class="text-3xl font-mono font-bold">12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <div
+                        class="bg-black border border-white/10 p-6 hover:border-white transition-all duration-500 group">
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h4
+                                    class="text-lg font-black uppercase tracking-tight group-hover:italic transition-all">
+                                    Mobile App Redesign</h4>
+                                <p class="text-[10px] text-white/40 mt-1 uppercase font-bold tracking-widest">Phase 02 /
+                                    High-Fidelity</p>
+                            </div>
+                            <span
+                                class="px-2 py-0.5 border border-white text-white text-[9px] font-black uppercase">Active</span>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold mb-3 tracking-widest uppercase">
+                                    <span class="text-white/40">Sync Progress</span>
+                                    <span>65.0%</span>
+                                </div>
+                                <div class="w-full bg-white/5 h-1">
+                                    <div class="bg-white h-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-6 border-y border-white/10">
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">Funds
+                                        Locked</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter">₹1,24,500.00</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">
+                                        Streamed</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter text-white">₹81,250.00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <div
+                                    class="flex items-center gap-2 text-[10px] text-white/40 uppercase font-bold tracking-widest">
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                                    </span>
+                                    Live Syncing
+                                </div>
+                                <a class="text-[10px] font-black uppercase tracking-widest border-b border-white hover:bg-white hover:text-black transition-colors px-1"
+                                    href="../streaming_project_view_logic/code.html">
+                                    View Contract
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-black border border-white/10 p-6 hover:border-white transition-all duration-500 group">
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h4
+                                    class="text-lg font-black uppercase tracking-tight group-hover:italic transition-all">
+                                    Smart Contract Audit</h4>
+                                <p class="text-[10px] text-white/40 mt-1 uppercase font-bold tracking-widest">V3
+                                    Protocol / Mainnet</p>
+                            </div>
+                            <span
+                                class="px-2 py-0.5 border border-white/20 text-white/40 text-[9px] font-black uppercase">Idle</span>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold mb-3 tracking-widest uppercase">
+                                    <span class="text-white/40">Sync Progress</span>
+                                    <span>20.0%</span>
+                                </div>
+                                <div class="w-full bg-white/5 h-1">
+                                    <div class="bg-white h-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-6 border-y border-white/10">
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">Funds
+                                        Locked</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter">₹2,07,500.00</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">
+                                        Streamed</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter text-white">₹41,500.00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <div
+                                    class="flex items-center gap-2 text-[10px] text-white/40 uppercase font-bold tracking-widest">
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-white/20"></span>
+                                    </span>
+                                    Paused
+                                </div>
+                                <a class="text-[10px] font-black uppercase tracking-widest border-b border-white hover:bg-white hover:text-black transition-colors px-1"
+                                    href="../streaming_project_view_logic/code.html">
+                                    View Contract
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-black border border-white/10 p-6 hover:border-white transition-all duration-500 group">
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h4
+                                    class="text-lg font-black uppercase tracking-tight group-hover:italic transition-all">
+                                    Q4 Content Engine</h4>
+                                <p class="text-[10px] text-white/40 mt-1 uppercase font-bold tracking-widest">Scale /
+                                    Social Growth</p>
+                            </div>
+                            <span class="px-2 py-0.5 bg-white text-black text-[9px] font-black uppercase">Settled</span>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold mb-3 tracking-widest uppercase">
+                                    <span class="text-white/40">Sync Progress</span>
+                                    <span>100.0%</span>
+                                </div>
+                                <div class="w-full bg-white/5 h-1">
+                                    <div class="bg-white h-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-6 border-y border-white/10">
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">Funds
+                                        Locked</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter">₹0.00</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-white/40 font-bold uppercase tracking-widest mb-2">
+                                        Streamed</p>
+                                    <p class="text-sm font-mono font-bold tracking-tighter text-white">₹99,600.00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <div
+                                    class="flex items-center gap-2 text-[10px] text-white/40 uppercase font-bold tracking-widest">
+                                    <span class="material-symbols-outlined text-xs">verified</span>
+                                    Finalized
+                                </div>
+                                <a class="text-[10px] font-black uppercase tracking-widest border-b border-white hover:bg-white hover:text-black transition-colors px-1"
+                                    href="#">
+                                    History
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../client__create_new_project_form/code.html"
+                        class="border border-dashed border-white/20 p-6 flex flex-col items-center justify-center text-center group cursor-pointer hover:border-white transition-all min-h-[300px] bg-white/5 no-underline text-white">
+                        <div
+                            class="size-12 border border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all mb-4">
+                            <span class="material-symbols-outlined text-3xl">add</span>
+                        </div>
+                        <h4 class="font-black uppercase tracking-widest group-hover:italic transition-all">Initiate
+                            Stream</h4>
+                        <p class="text-[11px] text-white/40 mt-3 max-w-[180px] font-medium uppercase tracking-tighter">
+                            Deploy new milestone contract to the ledger</p>
+                    </a>
+                </div>
+                <div class="mt-20">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="text-xl font-black uppercase tracking-widest">Recent Ledger Events</h3>
+                        <a class="text-xs font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:bg-white hover:text-black px-2 transition-all"
+                            href="#">Full Explorer</a>
+                    </div>
+                    <div class="bg-black border border-white/10 overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead class="bg-white/5 border-b border-white/10">
+                                <tr>
+                                    <th
+                                        class="px-6 py-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Operation</th>
+                                    <th
+                                        class="px-6 py-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Project ID</th>
+                                    <th
+                                        class="px-6 py-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Volume</th>
+                                    <th
+                                        class="px-6 py-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Hash</th>
+                                    <th
+                                        class="px-6 py-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-white text-base">check_circle</span>
+                                            <span
+                                                class="text-xs font-bold uppercase tracking-widest group-hover:italic">Release</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5 text-xs font-medium uppercase tracking-tighter text-white/60">
+                                        Mobile Redesign</td>
+                                    <td class="px-6 py-5 text-xs font-mono font-bold tracking-tighter">₹20,750</td>
+                                    <td class="px-6 py-5 text-[10px] font-mono text-white/40">0x8a2...f3e1</td>
+                                    <td
+                                        class="px-6 py-5 text-[10px] text-white/40 font-bold uppercase tracking-tighter">
+                                        2m ago</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-white text-base">lock</span>
+                                            <span
+                                                class="text-xs font-bold uppercase tracking-widest group-hover:italic">Deposit</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5 text-xs font-medium uppercase tracking-tighter text-white/60">
+                                        Core Stream 01</td>
+                                    <td class="px-6 py-5 text-xs font-mono font-bold tracking-tighter">₹83,000</td>
+                                    <td class="px-6 py-5 text-[10px] font-mono text-white/40">0x4c2...1b90</td>
+                                    <td
+                                        class="px-6 py-5 text-[10px] text-white/40 font-bold uppercase tracking-tighter">
+                                        1h ago</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-white/40 text-base">pause</span>
+                                            <span
+                                                class="text-xs font-bold uppercase tracking-widest text-white/40 group-hover:italic">Halt</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5 text-xs font-medium uppercase tracking-tighter text-white/30">
+                                        Security Audit</td>
+                                    <td class="px-6 py-5 text-xs font-mono font-bold tracking-tighter text-white/30">₹0
+                                    </td>
+                                    <td class="px-6 py-5 text-[10px] font-mono text-white/20">0xfe2...7d22</td>
+                                    <td
+                                        class="px-6 py-5 text-[10px] text-white/20 font-bold uppercase tracking-tighter">
+                                        4h ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
